@@ -1,0 +1,17 @@
+[build]
+  base    = "."
+  publish = "dist"
+  command = "npm run build"
+
+# Proxy /api calls to the Render backend
+[[redirects]]
+  from   = "/api/*"
+  to     = "https://YOUR-RENDER-APP.onrender.com/api/:splat"
+  status = 200
+  force  = true
+
+# SPA fallback — all other routes serve index.html
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
