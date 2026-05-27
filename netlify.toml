@@ -12,6 +12,7 @@
   to     = "https://icf-hmis-tlm6.onrender.com/api/:splat"
   status = 200
   force  = true
+  headers = {X-From = "Netlify"}
 
 # SPA fallback — all other routes serve index.html
 [[redirects]]
